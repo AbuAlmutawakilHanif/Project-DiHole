@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif, "Franklin Gothic Medium";
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form-box {
+  background: grey;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0px 20px 7px rgb(248, 247, 247);
+  width: 350px;
+  max-height: 550px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* ===== FORM SECTIONS ===== */
+.login-form-section,
+.signup-form-section,
+.forgot-form-section {
+  display: none;
+}
+
+.login-form-section.active,
+.signup-form-section.active,
+.forgot-form-section.active {
+  display: block;
+}
+
+.login-form-section h2,
+.signup-form-section h2,
+.forgot-form-section h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.login-form-section input[type="text"],
+.signup-form-section input[type="text"],
+.login-form-section input[type="password"],
+.signup-form-section input[type="password"],
+.forgot-form-section input[type="password"],
+.login-form-section input[type="email"],
+.signup-form-section input[type="email"],
+.forgot-form-section input[type="email"] {
+  width: 100%;
+  padding: 20px;
+  margin: 8px 0;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.forgot-form-section input[type="text"] {
+  width: 100%;
+  padding: 20px;
+  margin: 8px 0;
+  margin-left: 3Ppx;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: black;
+}
+
+.login-form-section .password-container,
+.signup-form-section .password-container,
+.forgot-form-section .password-container {
+  position: relative;
+}
+
+.password-container input {
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px;
+}
+
+.login-form-section button,
+.signup-form-section button {
+  width: 100%;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: rgb(234, 6, 6);
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.remember-forgot a,
+.register-link a {
+  text-decoration: none;
+  color: white;
+}
+
+.remember-forgot a:hover,
+.register-link a:hover {
+  color: black;
+}
+
+.register-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* Forgot page only: Email input */
+.forgot-form-section .styled-input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #333;
+  background-color: white;
+}
+
+.styled-input::placeholder {
+  color: #bbb;
+}
+
+/* Kode + tombol send */
+.forgot-form-section .input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.forgot-form-section .code-input {
+  padding: 15px 20px;
+  border: none;
+  font-size: 14px;
+  color: #333;
+  flex: 1;
+}
+
+.code-input::placeholder {
+  color: #bbb;
+}
+
+.divider {
+  width: 1px;
+  height: 60%;
+  background-color: #ccc;
+}
+
+.forgot-form-section .send-button {
+  padding: 0 20px;
+  height: 100%;
+  border: none;
+  background: none;
+  color: #888;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  color: black;
+}
+

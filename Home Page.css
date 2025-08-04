@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+/* Navbar LinkedIn Style */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+.nav-icons {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-icons li {
+  text-align: center;
+  position: relative;
+}
+
+.nav-icons li a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-icons li a span {
+  font-size: 20px;
+}
+
+.badge-icon {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+.profile-menu {
+  position: relative;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background: #222;
+  color: white;
+  width: 250px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-info img {
+  border-radius: 50%;
+}
+
+.profile-info .name {
+  font-weight: bold;
+}
+
+.profile-info .role {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.btn-view, .btn-verify {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-view {
+  background: #007bff;
+  color: white;
+}
+
+.btn-verify {
+  background: #0056b3;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.dropdown a {
+  display: block;
+  padding: 5px 0;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.dropdown hr {
+  border: 0;
+  border-top: 1px solid #444;
+  margin: 5px 0;
+}
+
+.dropdown a:hover {
+  text-decoration: underline;
+}
+
+
+.search-bar {
+  background-color: #1e1e1e;
+  padding: 20px 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #444;
+  height: 200px;
+}
+
+.search-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 250px;
+}
+
+.search-content p {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.search-content input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 300px;
+}
+
+.search-content button {
+  background-color: rgb(102, 102, 228);
+  width: 100px;
+  height: 50px;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 10px;
+  margin-top: 25px;
+  color: white;
+}
+
+.main-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.left-section {
+  flex: 2;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.left-section h2 {
+  margin-bottom: 10px;
+}
+
+.toggle-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.toggle-btn:hover {
+  background: #0056b3;
+}
+
+.add-job-form {
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.add-job-form input {
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background: #333;
+  color: white;
+}
+
+.add-job-form button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  background: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.job-card {
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-info {
+  max-width: 80%;
+}
+
+.job-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+}
+
+.company {
+  color: #aaa;
+  margin: 4px 0;
+}
+
+.location,
+.time {
+  font-size: 13px;
+  color: #777;
+}
+
+.badge {
+  display: inline-block;
+  background: #ffefef;
+  color: #d9534f;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+.new-badge {
+  background: #e6f7ee;
+  color: #28a745;
+}
+
+.job-card img {
+  height: 40px;
+}
+
+.right-section {
+  flex: 1;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.right-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin-bottom: 15px;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  color: white;
+  flex: 1;
+  outline: none;
+}
+
+.search-info {
+  font-size: 12px;
+  color: #00ff00;
+  margin-left: 8px;
+}
+
+.saved-job {
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.saved-job img {
+  height: 35px;
+}
+
+.saved-job .job-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+.saved-job .company {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.saved-job .location,
+.saved-job .salary,
+.saved-job .time {
+  font-size: 12px;
+  color: #888;
+}
+
+.expired {
+  display: inline-block;
+  background: #333;
+  color: #777;
+  font-size: 11px;
+  padding: 3px 6px;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #aaa;
+  font-size: 14px;
+}
+
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Di Hole</title>
+  <link rel="stylesheet" href="Home Page.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">DiHole</div>
+
+    <ul class="nav-icons">
+      <li><a href="#"><span>🏠</span><p>Home</p></a></li>
+      <li><a href="#"><span>👥</span><p>My Network</p></a></li>
+      <li><a href="#"><span>💼</span><p>Jobs</p></a></li>
+      <li><a href="#"><span>💬</span><p>Messaging</p></a></li>
+      <li><a href="#"><span>🔔</span><p>Notifications</p></a></li>
+    </ul>
+
+    <div class="profile-menu">
+      <img src="https://via.placeholder.com/35" alt="profile" class="profile-pic" id="profile-pic">
+      <div class="dropdown" id="profile-dropdown">
+        <div class="profile-info">
+          <img src="https://via.placeholder.com/50" alt="profile">
+          <div>
+            <p class="name">Abu Almutawakil Hanif</p>
+            <p class="role">Network Administrasi</p>
+          </div>
+        </div>
+        <button class="btn-view">View Profile</button>
+        <button class="btn-verify">Verify</button>
+        <hr>
+        <a href="#">Settings & Privacy</a>
+        <a href="#">Help</a>
+        <a href="#">Language</a>
+        <hr>
+        <a href="#">Posts & Activity</a>
+        <a href="#">Job Posting Account</a>
+        <a href="#">Sign Out</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <div class="search-content">
+      <p>Pekerjaan apa?</p>
+      <input type="text" placeholder="Masukan Kata Kunci" />
+    </div>
+    <div class="search-content">
+      <p>&nbsp;</p>
+      <input type="text" placeholder="Semua Klasifikasi" />
+    </div>
+    <div class="search-content">
+      <p>Di mana?</p>
+      <input type="text" placeholder="Masukan Kota atau Wilayah" />
+    </div>
+    <div class="search-content">
+      <button>Cari</button>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <!-- LEFT: Job Section -->
+    <div class="left-section">
+      <h2>Direkomendasikan untuk kamu</h2>
+      <button id="toggle-form-btn" class="toggle-btn">+ Tambah Job</button>
+
+      <!-- Form Tambah Job (default hidden) -->
+      <div class="add-job-form" id="add-job-form" style="display: none;">
+        <input type="text" id="job-title" placeholder="Job Title">
+        <input type="text" id="job-company" placeholder="Company">
+        <input type="text" id="job-location" placeholder="Location">
+        <input type="text" id="job-time" placeholder="Time (ex: 2 hari yang lalu)">
+        <input type="text" id="job-badge" placeholder="Badge (opsional)">
+        <input type="text" id="job-logo" placeholder="Logo URL">
+        <button id="add-job-btn">Tambah Job</button>
+      </div>
+
+      <div id="job-list"></div>
+    </div>
+
+    <!-- RIGHT: Saved Section -->
+    <div class="right-section">
+      <h3>Pencarian tersimpan</h3>
+      <div class="search-box">
+        <input type="text" placeholder="noc">
+        <span class="search-info">41 baru</span>
+      </div>
+
+      <h3>Lowongan kerja tersimpan</h3>
+      <div id="saved-jobs"></div>
+    </div>
+  </div>
+
+  <footer>&copy; 2025 DiHole. All rights reserved.</footer>
+
+  <script src="Home Page.js"></script>
+</body>
+</html>
